@@ -12,20 +12,19 @@ import Contact from './components/pages/Contact';
 
 function App() {  
     return (  
-        <div>  
-            <Header />  
-            <Nav />
-            <Router>
+        <Router>
+            <div>  
+                <Header />  
+                <Nav />
                 <Routes>
-                    <Route path="/main.jsx" element={<Home />} />
-                    <Route path="/pages/About.jsx" element={<About />} />
-                    <Route path="/pages/Contact.jsx" element={<Contact />} />                    
+                    <Route path="/" element={<Home />} />
+                    <Route path="/home" element={<Home />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/contact" element={<Contact />} />                    
                 </Routes>
-            </Router>
-            <Main />  
-            <Gallery />  
-            <Footer />  
-        </div>  
+                <Footer />  
+            </div>  
+        </Router>
     );  
 }  
 
