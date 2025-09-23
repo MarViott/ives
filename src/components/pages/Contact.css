@@ -1,30 +1,37 @@
+/* Estilos generales */
 .contact-container {
-  position: relative;
-  max-width: 1280px;
-  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f8f8;
   padding: 2rem;
-  text-align: center;
 }
 
 .contact-container h1 {
-  color: black;
+  color: #333;
   margin-bottom: 1rem;
+  text-align: center;
 }
 
 .contact-container > p {
-  color: black;
+  color: #666;
   margin-bottom: 2rem;
+  text-align: center;
+  max-width: 600px;
 }
 
 /* Estilos mejorados para el formulario de contacto */
-.contact-form {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 2rem;
-  border: 3px solid #333 !important;
+.contact-form { 
+  width: 100%;
+  max-width: 500px;
+  padding: 2rem; 
+  border: 2px solid #333;
   border-radius: 12px;
   background-color: white;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
 }
 
 .form-group {
@@ -74,22 +81,25 @@
 }
 
 .submit-btn {
-  background: linear-gradient(135deg, #64b7ff 0%, #535bf2 100%);
+  background: linear-gradient(135deg, #646cff 0%, #535bf2 100%);
   color: white;
-  padding: 0.8rem 2rem;
+  padding: 1rem 2rem;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 600;
   transition: all 0.3s ease;
   width: 100%;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .submit-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(100, 108, 255, 0.3);
+  box-shadow: 0 8px 25px rgba(100, 108, 255, 0.4);
+  background: linear-gradient(135deg, #535bf2 0%, #646cff 100%);
 }
 
 .submit-btn:active {
@@ -99,11 +109,13 @@
 /* Sección de redes sociales */
 .social-section {
   margin-top: 3rem;
+  text-align: center;
 }
 
 .social-section p {
-  color: black;
+  color: #333;
   margin-bottom: 1rem;
+  font-size: 1.1rem;
 }
 
 .social-links {
@@ -450,4 +462,58 @@
 .contact-container input[type="submit"]:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(100, 108, 255, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-container {
+    padding: 1rem;
+    min-height: 100vh;
+  }
+  
+  .contact-form {
+    max-width: 100%;
+    padding: 1.5rem;
+    margin: 1rem 0;
+  }
+  
+  .contact-container h1 {
+    font-size: 1.8rem;
+  }
+  
+  .social-links {
+    gap: 1rem;
+  }
+  
+  .social-links a {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .whatsapp-float {
+    width: 55px;
+    height: 55px;
+    bottom: 15px;
+    right: 15px;
+  }
+  
+  .whatsapp-float::before,
+  .whatsapp-float::after {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-form {
+    padding: 1rem;
+  }
+  
+  .contact-container h1 {
+    font-size: 1.5rem;
+  }
+  
+  .submit-btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
 }

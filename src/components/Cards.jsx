@@ -1,3 +1,5 @@
+ import React from 'react';  
+import '../index.css';
  function Tarjeta({ titulo, descripcion, imagenUrl, botonTexto }) {
     return (
         <div className="tarjeta">
