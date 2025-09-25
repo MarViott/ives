@@ -21,15 +21,15 @@
 
 .header-content {
   max-width: 1280px;
-  margin: 0 auto;
-  padding: 3rem 2rem;
+  margin: 0;
+  padding: 1rem;
   position: relative;
   z-index: 2;
   text-align: center;
 }
 
 .header-main {
-  margin-bottom: 2rem;
+  margin: 2rem;
 }
 
 .company-name {

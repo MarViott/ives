@@ -1,18 +1,19 @@
-:root { 
+*{
   margin: 0;
-  padding: 0;  
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {   
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+  line-height: 1;
   font-weight: 400;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
- 
-  
+  -moz-osx-font-smoothing: grayscale;  
   color: black;
   background-color: white;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -27,16 +28,6 @@ a {
 a:hover {
   color: #535bf2;
 }
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-
 
 nav ul{
   list-style: none;
@@ -94,6 +85,21 @@ main {
   gap: 20px;  
 }
 
+.subtitle {
+  font-size: 1.2rem;
+  color: black;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+p {
+  margin: 30px;
+  padding: 30px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;    
+}
 
 button {
   border-radius: 8px;

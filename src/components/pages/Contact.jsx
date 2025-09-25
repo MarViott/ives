@@ -13,7 +13,7 @@ function Contact() {
   };
 
   return (
-    <div className="contact-container">
+    <div className="contact-container subtitle">
       <h1>Contact</h1>
       <p>If you have any questions, feel free to reach out! For budget, meeting, or general inquiries, please fill out the form below or contact us via whatsapp, click on the button. </p>
       
@@ -35,8 +35,7 @@ function Contact() {
       
       <p>Contact us today to learn more about our services and how we can help you succeed!</p>
       
-      <div className="social-section">
-        <p>Follow us:</p>
+      <div className="social-section">        
         <div className="social-links">
           <a href="https://www.facebook.com/ives.viotti" target="_blank" rel="noopener noreferrer" title="Facebook">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">

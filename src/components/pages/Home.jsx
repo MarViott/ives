@@ -1,10 +1,11 @@
 import React from 'react'
 import Gallery from '../Gallery'
 
+
 function Home() {
   return (
-    <div>
-          <h2>Logistics and Transportation</h2>  
+    <div className='subtitle'>
+          <h1>Home</h1>  
           <p>Logistics shipping consultancy services. We help business move goods smarter 
 and more efficiently. </p> 
 

@@ -33,7 +33,7 @@ const Services = () => (
     <div className="services-container">
         <div className="services-header">
             <h1>Nuestros Servicios</h1>
-            <p className="services-subtitle">
+            <p className="subtitle">
                 Impulsa tu empresa con estrategias de logística efectivas. Shipping Star Solutions LLC ofrece una amplia gama de servicios de logística adaptados a tus necesidades.
             </p>
         </div>
