@@ -5,7 +5,7 @@ import Header from './components/Header';
 import Nav from './components/Nav';  
 import Main from './components/Main';  
 import Footer from './components/Footer'; 
-import Gallery from './components/Gallery';
+
 import Home from './components/pages/Home';
 import Services from './components/pages/Services';
 import Cards from './components/Cards';

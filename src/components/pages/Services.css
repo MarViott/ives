@@ -1,7 +1,6 @@
 .services-container {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  margin: 0;
+  padding: 1rem;
   color: rgba(255, 255, 255, 0.87);
 }
 
@@ -45,6 +44,7 @@
   transition: all 0.3s ease;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
+ 
 }
 
 .service-card:hover {

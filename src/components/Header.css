@@ -1,0 +1,166 @@
+.header-container {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.header-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #646cff 0%, #535bf2 100%);
+  opacity: 0.1;
+  z-index: 1;
+}
+
+.header-content {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.header-main {
+  margin-bottom: 2rem;
+}
+
+.company-name {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #646cff 0%, #535bf2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-shadow: 0 4px 20px rgba(100, 108, 255, 0.3);
+}
+
+.company-tagline {
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.header-features {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.feature-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+  transition: all 0.3s ease;
+  padding: 1rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  min-width: 100px;
+}
+
+.feature-item:hover {
+  transform: translateY(-5px);
+  background: rgba(100, 108, 255, 0.1);
+  border-color: rgba(100, 108, 255, 0.3);
+  box-shadow: 0 10px 30px rgba(100, 108, 255, 0.2);
+}
+
+.feature-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header-content {
+    padding: 2rem 1rem;
+  }
+  
+  .company-name {
+    font-size: 2.2rem;
+  }
+  
+  .company-tagline {
+    font-size: 1.1rem;
+  }
+  
+  .header-features {
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  
+  .feature-item {
+    min-width: 80px;
+    padding: 0.8rem;
+  }
+  
+  .feature-icon {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-content {
+    padding: 1.5rem 0.5rem;
+  }
+  
+  .company-name {
+    font-size: 1.8rem;
+  }
+  
+  .company-tagline {
+    font-size: 1rem;
+  }
+  
+  .header-features {
+    gap: 1rem;
+  }
+  
+  .feature-item {
+    min-width: 70px;
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+  
+  .feature-icon {
+    font-size: 1.3rem;
+  }
+}
+
+/* Animación sutil para el gradiente del título */
+@keyframes gradient-shift {
+  0% {
+    background: linear-gradient(135deg, #646cff 0%, #535bf2 100%);
+  }
+  50% {
+    background: linear-gradient(135deg, #535bf2 0%, #646cff 100%);
+  }
+  100% {
+    background: linear-gradient(135deg, #646cff 0%, #535bf2 100%);
+  }
+}
+
+.company-name:hover {
+  animation: gradient-shift 2s ease-in-out;
+  -webkit-background-clip: text;
+  background-clip: text;
+}

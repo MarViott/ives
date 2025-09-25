@@ -2,12 +2,12 @@ import React from 'react';
 
 function Gallery() {  
     const images = [  
-        "https://picsum.photos/700/400?random",  
-        "https://picsum.photos/700/400?random",  
-        "https://picsum.photos/700/400?random",
-        "https://picsum.photos/700/400?random",  
-        "https://picsum.photos/700/400?random",
+        "./src/assets/img/camiones1.jpg",  
+        "./src/assets/img/parque_eolico_1.jpg",  
+        "./src/assets/img/camiones2.jpg",  
+        "./src/assets/img/parque_eolico_3.jpg",
     ];  
+        
 
     return (  
         <>
@@ -24,8 +24,8 @@ function Gallery() {
                 src={src} 
                 alt={`Imagen ${index + 1}`} 
                 style={{ 
-                    width: "150px", 
-                    height: "150px" }} />  
+                    width: "250px", 
+                    height: "250px" }} />  
             ))}  
         </section>  
         </>

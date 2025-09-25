@@ -1,6 +1,7 @@
 import React from 'react'
 import './Contact.css'
 
+
 function Contact() {
   // Función para abrir WhatsApp con mensaje predefinido
   const openWhatsApp = () => {

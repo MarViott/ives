@@ -1,12 +1,13 @@
 /* Estilos generales */
+
 .contact-container {
+  padding: 1rem;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #f8f8f8;
-  padding: 2rem;
+  background-image: url('../../assets/img/parque_eolico_0.jpg');
 }
 
 .contact-container h1 {
@@ -24,14 +25,14 @@
 
 /* Estilos mejorados para el formulario de contacto */
 .contact-form { 
-  width: 100%;
-  max-width: 500px;
+ width: 100%;
+  max-width: 400px;
   padding: 2rem; 
   border: 2px solid #333;
   border-radius: 12px;
   background-color: white;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  margin: 0 auto;
+  margin: 0;
 }
 
 .form-group {
