@@ -18,18 +18,62 @@ function Contact() {
       <p>If you have any questions, feel free to reach out! For budget, meeting, or general inquiries, please fill out the form below or contact us via whatsapp, click on the button. </p>
       
       <form className="contact-form">
-        <div className="form-group">
-          <label htmlFor="fname">First name:</label>
-          <input type="text" id="fname" name="fname" required placeholder="Enter your first name"/>
+        <div className="form-row">
+          <div className="form-group half">
+            <label htmlFor="fname">First name:</label>
+            <input type="text" id="fname" name="fname" required placeholder="Enter your first name"/>
+          </div>
+          <div className="form-group half">
+            <label htmlFor="lname">Last name:</label>
+            <input type="text" id="lname" name="lname" required placeholder="Enter your last name"/>
+          </div>
         </div>
-        <div className="form-group">
-          <label htmlFor="lname">Last name:</label>
-          <input type="text" id="lname" name="lname" required placeholder="Enter your last name"/>
-        </div>
+        
         <div className="form-group">
           <label htmlFor="email">Email:</label>
           <input type="email" id="email" name="email" required placeholder="Enter your email"/>
         </div>
+        
+        <div className="form-row">
+          <div className="form-group half">
+            <label htmlFor="company">Company:</label>
+            <input type="text" id="company" name="company" placeholder="Enter your company name"/>
+          </div>
+          <div className="form-group half">
+            <label htmlFor="position">Position:</label>
+            <input type="text" id="position" name="position" placeholder="Enter your job position"/>
+          </div>
+        </div>
+        
+        <div className="form-group">
+          <label htmlFor="country">Country:</label>
+          <select id="country" name="country" required>
+            <option value="">Select your country</option>
+            <option value="AR">Argentina</option>
+            <option value="BO">Bolivia</option>
+            <option value="BR">Brazil</option>
+            <option value="CL">Chile</option>
+            <option value="CO">Colombia</option>
+            <option value="EC">Ecuador</option>
+            <option value="GY">Guyana</option>
+            <option value="PY">Paraguay</option>
+            <option value="PE">Peru</option>
+            <option value="SR">Suriname</option>
+            <option value="UY">Uruguay</option>
+            <option value="VE">Venezuela</option>
+            <option value="US">United States</option>
+            <option value="CA">Canada</option>
+            <option value="MX">Mexico</option>
+            <option value="ES">Spain</option>
+            <option value="PT">Portugal</option>
+            <option value="FR">France</option>
+            <option value="DE">Germany</option>
+            <option value="IT">Italy</option>
+            <option value="GB">United Kingdom</option>
+            <option value="OTHER">Other</option>
+          </select>
+        </div>
+        
         <button type="submit" className="submit-btn">Submit</button>
       </form>       
       

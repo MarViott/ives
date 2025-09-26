@@ -22,9 +22,9 @@
 
 /* Estilos mejorados para el formulario de contacto */
 .contact-form { 
- width: 100%;
-  max-width: 400px;
-  padding: 1rem; 
+  width: 100%;
+  max-width: 500px;
+  padding: 1.5rem; 
   border: 2px solid #333;
   border-radius: 12px;
   background-color: white;
@@ -33,33 +33,47 @@
 }
 
 .form-group {
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
   text-align: left;
+}
+
+/* Layout de dos columnas */
+.form-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.form-group.half {
+  flex: 1;
+  margin-bottom: 0;
 }
 
 .contact-form label {
   color: #333 !important;
   font-weight: 600;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.3rem;
   display: block;
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 .contact-form input[type="text"],
-.contact-form input[type="email"] {
+.contact-form input[type="email"],
+.contact-form select {
   width: 100%;
-  padding: 0.8rem;
+  padding: 0.6rem;
   border: 2px solid #666 !important;
   border-radius: 6px;
   background: white !important;
   color: #333 !important;
-  font-size: 1rem;
+  font-size: 0.9rem;
   transition: all 0.3s ease;
   box-sizing: border-box;
 }
 
 .contact-form input[type="text"]:focus,
-.contact-form input[type="email"]:focus {
+.contact-form input[type="email"]:focus,
+.contact-form select:focus {
   outline: none;
   border-color: blue !important;
   background: white !important;
@@ -76,6 +90,10 @@
 .contact-form input[type="text"]::placeholder,
 .contact-form input[type="email"]::placeholder {
   color: rgba(0, 0, 0, 0.6) !important;
+}
+
+.contact-form select option:first-child {
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .submit-btn {
@@ -501,9 +519,25 @@
   }
 }
 
+@media (max-width: 600px) {
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  .form-group.half {
+    margin-bottom: 0.8rem;
+  }
+  
+  .contact-form {
+    max-width: 350px;
+  }
+}
+
 @media (max-width: 480px) {
   .contact-form {
     padding: 1rem;
+    max-width: 300px;
   }
   
   .contact-container h1 {
