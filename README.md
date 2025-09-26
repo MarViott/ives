@@ -1,9 +1,9 @@
-# Ives Viotti Consultant
+# SHIPPING START SOLUTIONS LLC
 
-## Logistic expert
+## by Ives Viotti
 
-## Desarrollo web: Marisa Viotti
+### Desarrollo web: Marisa Viotti
 
-### Stack: Vite, React, Css, VisualStudio, Github
+#### Stack: Vite, React, Css, Visual Studio, Github
 
-### @2025 Todos los derechos reservados
+#### @2025 Todos los derechos reservados
