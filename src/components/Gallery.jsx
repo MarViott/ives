@@ -3,7 +3,7 @@ import React from 'react';
 function Gallery() {  
     const images = [  
         "./src/assets/img/camiones1.jpg",  
-        "./src/assets/img/parque_eolico_1.jpg",  
+        "./src/assets/img/parque_eolico_0.jpg",  
         "./src/assets/img/camiones2.jpg",  
         "./src/assets/img/parque_eolico_3.jpg",
     ];  

@@ -14,10 +14,7 @@
   -moz-osx-font-smoothing: grayscale;  
   color: black;
   background-color: white;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  
 }
 
 a {
@@ -55,7 +52,7 @@ nav ul{
 
 h1 {
   font-size: 3rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   background: linear-gradient(135deg, #646cff 0%, #535bf2 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -82,19 +79,20 @@ main {
   color: #333;
   min-height: 80vh;
   flex-wrap: wrap;
-  gap: 20px;  
+  gap: 10px;  
 }
 
 .subtitle {
   font-size: 1.2rem;
   color: black;
   max-width: 800px;
-  margin: 0 auto;
+  margin: 0 auto;  
   line-height: 1.6;
 }
 
-p {
-  margin: 30px;
+
+
+p {  
   padding: 30px;
   text-align: center;
   justify-content: center;

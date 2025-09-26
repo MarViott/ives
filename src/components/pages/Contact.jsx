@@ -14,7 +14,7 @@ function Contact() {
 
   return (
     <div className="contact-container subtitle">
-      <h1>Contact</h1>
+      <h1 style={{color: 'white'}}>Contact</h1>
       <p>If you have any questions, feel free to reach out! For budget, meeting, or general inquiries, please fill out the form below or contact us via whatsapp, click on the button. </p>
       
       <form className="contact-form">
