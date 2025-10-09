@@ -40,3 +40,27 @@
 .read-the-docs {
   color: #888;
 }
+
+/* Ajustes para el layout principal con sidebar */
+.main-content {
+  transition: margin-left 0.3s ease;
+  min-height: 100vh;
+}
+
+/* Cuando el sidebar está abierto en desktop */
+@media (min-width: 1024px) {
+  .sidebar.open + .main-content {
+    margin-left: 350px;
+  }
+}
+
+/* Asegurar que el contenido no se superponga con el botón del sidebar */
+.App {
+  position: relative;
+}
+
+/* Ajustar z-index del header para que esté debajo del sidebar */
+header {
+  position: relative;
+  z-index: 99;
+}

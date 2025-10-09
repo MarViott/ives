@@ -1,551 +1,461 @@
-/* Estilos generales */
-
-.contact-container {
-  padding: 1rem;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-image: url('../../assets/img/parque_eolico_1.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.contact-container > p {
+/* Reset y estilos base */
+.contact-page {
   color: white;
-  margin-bottom: 2rem;
-  text-align: center;
-  max-width: 600px;
+  min-height: 100vh;
 }
 
-/* Estilos mejorados para el formulario de contacto */
-.contact-form { 
-  width: 100%;
-  max-width: 500px;
-  padding: 1.5rem; 
-  border: 2px solid #333;
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Hero Section */
+.contact-hero {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+  padding: 4rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(100, 108, 255, 0.1) 0%, rgba(83, 91, 242, 0.05) 100%);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-hero h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #646cff 0%, #535bf2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.contact-hero p {
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Botones principales */
+.btn {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 180px;
+  justify-content: center;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #646cff 0%, #535bf2 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(100, 108, 255, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(100, 108, 255, 0.4);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Contact Methods Section */
+.contact-methods {
+  padding: 4rem 0;
+  background: #1a1a1a;
+}
+
+.methods-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.method-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
-  background-color: white;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  margin: 0;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.method-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border-color: rgba(100, 108, 255, 0.5);
+}
+
+.method-card.featured {
+  background: linear-gradient(135deg, rgba(100, 108, 255, 0.2) 0%, rgba(83, 91, 242, 0.1) 100%);
+  border-color: #646cff;
+}
+
+.method-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.method-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.method-card p {
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 1rem;
+}
+
+.method-card a {
+  color: #646cff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.method-card a:hover {
+  color: #535bf2;
+}
+
+.method-card address {
+  font-style: normal;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+}
+
+.book-meeting-btn {
+  background: linear-gradient(135deg, #646cff 0%, #535bf2 100%);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.book-meeting-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(100, 108, 255, 0.4);
+}
+
+/* Contact Form Section */
+.contact-form-section {
+  padding: 4rem 0;
+  background: linear-gradient(180deg, #1a1a1a 0%, #2d2d2d 100%);
+}
+
+.form-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.form-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #646cff 0%, #535bf2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.form-header p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.1rem;
+}
+
+/* Formulario mejorado */
+.contact-form {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .form-group {
-  margin-bottom: 0.8rem;
-  text-align: left;
-}
-
-/* Layout de dos columnas */
-.form-row {
   display: flex;
-  gap: 1rem;
-  margin-bottom: 0.8rem;
+  flex-direction: column;
 }
 
-.form-group.half {
-  flex: 1;
-  margin-bottom: 0;
+.form-group.full-width {
+  grid-column: 1 / -1;
 }
 
 .contact-form label {
-  color: #333 !important;
+  color: #333;
   font-weight: 600;
-  margin-bottom: 0.3rem;
-  display: block;
-  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
 }
 
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form select {
-  width: 100%;
-  padding: 0.6rem;
-  border: 2px solid #666 !important;
-  border-radius: 6px;
-  background: white !important;
-  color: #333 !important;
-  font-size: 0.9rem;
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  padding: 0.8rem;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  font-size: 1rem;
+  background: white;
+  color: #333;
   transition: all 0.3s ease;
-  box-sizing: border-box;
 }
 
-.contact-form input[type="text"]:focus,
-.contact-form input[type="email"]:focus,
-.contact-form select:focus {
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
   outline: none;
-  border-color: blue !important;
-  background: white !important;
-  box-shadow: 0 0 0 3px rgba(100, 108, 255, 0.2);
+  border-color: #646cff;
+  box-shadow: 0 0 0 3px rgba(100, 108, 255, 0.1);
 }
 
-/* Estilo adicional para asegurar visibilidad */
-.contact-form input {
-  border: 2px solid #666 !important;
-  background: white !important;
-  color: #333 !important;
+.contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
 }
 
-.contact-form input[type="text"]::placeholder,
-.contact-form input[type="email"]::placeholder {
-  color: rgba(0, 0, 0, 0.6) !important;
-}
-
-.contact-form select option:first-child {
-  color: rgba(0, 0, 0, 0.6);
+.form-actions {
+  text-align: center;
+  margin-top: 2rem;
 }
 
 .submit-btn {
   background: linear-gradient(135deg, #646cff 0%, #535bf2 100%);
   color: white;
-  padding: 1rem 2rem;
   border: none;
+  padding: 1rem 3rem;
   border-radius: 8px;
-  cursor: pointer;
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 600;
+  cursor: pointer;
   transition: all 0.3s ease;
-  width: 100%;
-  margin-top: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  min-width: 200px;
 }
 
 .submit-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(100, 108, 255, 0.4);
-  background: linear-gradient(135deg, #535bf2 0%, #646cff 100%);
+  box-shadow: 0 6px 20px rgba(100, 108, 255, 0.4);
 }
 
-.submit-btn:active {
-  transform: translateY(0);
+.privacy-note {
+  color: #666;
+  font-size: 0.85rem;
+  margin-top: 1rem;
+  line-height: 1.4;
 }
 
-/* Sección de redes sociales */
-.social-section {
-  margin-top: 3rem;
-  text-align: center;
+/* Business Info Section */
+.business-info {
+  padding: 4rem 0;
+  background: #1a1a1a;
 }
 
-.social-section p {
-  color: #535bf2;
-  margin-bottom: 1rem;
-  font-size: 1.1rem;
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 3rem;
 }
 
-.social-links {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
-
-.social-links a {
-  color: blue(255, 255, 255, 0.7);
-  text-decoration: none;
-  font-weight: 500;
-  padding: 0.8rem;
-  border-radius: 50%;
-  transition: all 0.3s ease;
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50px;
-  height: 50px;
-  position: relative;
-}
-
-.social-links a:hover {
-  transform: translateY(-3px) scale(1.1);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-}
-
-/* Efectos específicos por red social */
-.social-links a[href*="facebook"]:hover {
-  background: #1877F2;
-  border-color: #1877F2;
-  color: white;
-  box-shadow: 0 8px 25px rgba(24, 119, 242, 0.4);
-}
-
-.social-links a[href*="instagram"]:hover {
-  background: linear-gradient(45deg, #E4405F, #C13584, #833AB4);
-  border-color: #E4405F;
-  color: white;
-  box-shadow: 0 8px 25px rgba(228, 64, 95, 0.4);
-}
-
-.social-links a[href*="linkedin"]:hover {
-  background: #0A66C2;
-  border-color: #0A66C2;
-  color: white;
-  box-shadow: 0 8px 25px rgba(10, 102, 194, 0.4);
-}
-
-.social-links a svg {
-  transition: all 0.3s ease;
-}
-
-/* Estilos para el botón flotante de WhatsApp */
-.whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 60px;
-  height: 60px;
-  background-color: #25D366;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
-  transition: all 0.3s ease;
-  z-index: 1000;
-  animation: pulse 2s infinite;
-}
-
-.whatsapp-float:hover {
-  transform: scale(1.1);
-  box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
-  background-color: #128C7E;
-}
-
-.whatsapp-float:active {
-  transform: scale(0.95);
-}
-
-/* Animación de pulso para llamar la atención */
-@keyframes pulse {
-  0% {
-    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
-  }
-  50% {
-    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.8);
-  }
-  100% {
-    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
-  }
-}
-
-/* Tooltip del botón WhatsApp */
-.whatsapp-float::before {
-  content: "¡Envíanos un mensaje!";
-  position: absolute;
-  right: 70px;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.8);
-  color: white;
-  padding: 8px 12px;
-  border-radius: 6px;
-  font-size: 14px;
-  white-space: nowrap;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
-  pointer-events: none;
-}
-
-.whatsapp-float:hover::before {
-  opacity: 1;
-  visibility: visible;
-  right: 75px;
-}
-
-/* Flecha del tooltip */
-.whatsapp-float::after {
-  content: "";
-  position: absolute;
-  right: 65px;
-  top: 50%;
-  transform: translateY(-50%);
-  border: 6px solid transparent;
-  border-left-color: rgba(0, 0, 0, 0.8);
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
-}
-
-.whatsapp-float:hover::after {
-  opacity: 1;
-  visibility: visible;
-  right: 69px;
-}
-
-/* Responsive para dispositivos móviles */
-@media (max-width: 768px) {
-  .contact-container {
-    padding: 1rem;
-  }
-  
-  .contact-form {
-    max-width: 100%;
-    padding: 1.5rem;
-  }
-  
-  .social-links {
-    gap: 1.5rem;
-  }
-  
-  .social-links a {
-    width: 45px;
-    height: 45px;
-    padding: 0.6rem;
-  }
-  
-  .social-links a svg {
-    width: 20px;
-    height: 20px;
-  }
-  
-  .whatsapp-float {
-    width: 55px;
-    height: 55px;
-    bottom: 15px;
-    right: 15px;
-  }
-  
-  .whatsapp-float svg {
-    width: 28px;
-    height: 28px;
-  }
-  
-  /* Ocultar tooltip en móviles */
-  .whatsapp-float::before,
-  .whatsapp-float::after {
-    display: none;
-  }
-}
-
-/* Estilos para el botón flotante de WhatsApp */
-.whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 60px;
-  height: 60px;
-  background-color: #25D366;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
-  transition: all 0.3s ease;
-  z-index: 1000;
-  animation: pulse 2s infinite;
-}
-
-.whatsapp-float:hover {
-  transform: scale(1.1);
-  box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
-  background-color: #128C7E;
-}
-
-.whatsapp-float:active {
-  transform: scale(0.95);
-}
-
-/* Animación de pulso para llamar la atención */
-@keyframes pulse {
-  0% {
-    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
-  }
-  50% {
-    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.8);
-  }
-  100% {
-    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
-  }
-}
-
-/* Tooltip opcional */
-.whatsapp-float::before {
-  content: "¡Envíanos un mensaje!";
-  position: absolute;
-  right: 70px;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.8);
-  color: white;
-  padding: 8px 12px;
-  border-radius: 6px;
-  font-size: 14px;
-  white-space: nowrap;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
-  pointer-events: none;
-}
-
-.whatsapp-float:hover::before {
-  opacity: 1;
-  visibility: visible;
-  right: 75px;
-}
-
-/* Flecha del tooltip */
-.whatsapp-float::after {
-  content: "";
-  position: absolute;
-  right: 65px;
-  top: 50%;
-  transform: translateY(-50%);
-  border: 6px solid transparent;
-  border-left-color: rgba(0, 0, 0, 0.8);
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
-}
-
-.whatsapp-float:hover::after {
-  opacity: 1;
-  visibility: visible;
-  right: 69px;
-}
-
-/* Responsive para dispositivos móviles */
-@media (max-width: 768px) {
-  .whatsapp-float {
-    width: 55px;
-    height: 55px;
-    bottom: 15px;
-    right: 15px;
-  }
-  
-  .whatsapp-float svg {
-    width: 28px;
-    height: 28px;
-  }
-  
-  /* Ocultar tooltip en móviles */
-  .whatsapp-float::before,
-  .whatsapp-float::after {
-    display: none;
-  }
-}
-
-/* Estilos adicionales para el formulario de contacto */
-.contact-container form {
+.info-card {
   background: rgba(255, 255, 255, 0.05);
-  padding: 2rem;
-  border-radius: 12px;
-  margin: 2rem 0;
+  backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 2.5rem;
 }
 
-.contact-container label {
-  color: rgba(255, 255, 255, 0.9);
-  font-weight: 500;
-  margin-bottom: 0.5rem;
-  display: block;
+.info-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #646cff;
 }
 
-.contact-container input[type="text"],
-.contact-container input[type="email"] {
-  width: 100%;
-  padding: 0.8rem;
-  margin: 0.5rem 0 1rem 0;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 6px;
-  background: rgba(255, 255, 255, 0.1);
-  color: white;
-  font-size: 1rem;
+.hours-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
 }
 
-.contact-container input[type="text"]:focus,
-.contact-container input[type="email"]:focus {
-  outline: none;
-  border-color: #646cff;
-  background: rgba(255, 255, 255, 0.15);
+.hour-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.contact-container input[type="submit"] {
-  background: linear-gradient(135deg, #646cff 0%, #535bf2 100%);
-  color: white;
-  padding: 0.8rem 2rem;
-  border: none;
-  border-radius: 6px;
+.hour-item.emergency {
+  color: #ff6b6b;
+  font-weight: 600;
+}
+
+.benefits-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.benefits-list li {
+  padding: 0.8rem 0;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* WhatsApp Float Button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: #25D366;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-  font-size: 1rem;
-  font-weight: 500;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
   transition: all 0.3s ease;
+  z-index: 1000;
+  animation: pulse 2s infinite;
 }
 
-.contact-container input[type="submit"]:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(100, 108, 255, 0.3);
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .contact-container {
-    padding: 1rem;
-    min-height: 100vh;
+  .contact-hero h1 {
+    font-size: 2.5rem;
   }
   
-  .contact-form {
-    max-width: 100%;
-    padding: 1.5rem;
-    margin: 1rem 0;
+  .contact-hero p {
+    font-size: 1.1rem;
   }
   
-  .contact-container h1 {
-    font-size: 1.8rem;
+  .hero-actions {
+    flex-direction: column;
+    align-items: center;
   }
   
-  .social-links {
+  .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .methods-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
     gap: 1rem;
   }
   
-  .social-links a {
-    width: 45px;
-    height: 45px;
+  .contact-form {
+    padding: 1.5rem;
+  }
+  
+  .info-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
   
   .whatsapp-float {
+    bottom: 1rem;
+    right: 1rem;
     width: 55px;
     height: 55px;
-    bottom: 15px;
-    right: 15px;
-  }
-  
-  .whatsapp-float::before,
-  .whatsapp-float::after {
-    display: none;
-  }
-}
-
-@media (max-width: 600px) {
-  .form-row {
-    flex-direction: column;
-    gap: 0;
-  }
-  
-  .form-group.half {
-    margin-bottom: 0.8rem;
-  }
-  
-  .contact-form {
-    max-width: 350px;
   }
 }
 
 @media (max-width: 480px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .contact-hero {
+    padding: 2rem 0;
+  }
+  
+  .contact-hero h1 {
+    font-size: 2rem;
+  }
+  
+  .form-header h2 {
+    font-size: 2rem;
+  }
+  
   .contact-form {
     padding: 1rem;
-    max-width: 300px;
   }
   
-  .contact-container h1 {
-    font-size: 1.5rem;
-  }
-  
-  .submit-btn {
-    padding: 0.8rem 1.5rem;
-    font-size: 0.9rem;
+  .info-card {
+    padding: 1.5rem;
   }
 }
