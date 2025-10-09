@@ -16,7 +16,7 @@ function Contact() {
 
   // Función para abrir WhatsApp con mensaje predefinido
   const openWhatsApp = () => {
-    const phoneNumber = "1234567890"; // Reemplaza con tu número real
+    const phoneNumber = "13466003396"; // Reemplaza con tu número real
     const message = "Hello! I'm interested in learning more about your logistics and transportation services.";
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappURL, '_blank');
@@ -25,7 +25,7 @@ function Contact() {
   // Función para abrir Calendly o sistema de citas
   const openBookMeeting = () => {
     // Reemplaza esta URL con tu enlace de Calendly o sistema de citas
-    const calendlyURL = "https://calendly.com/your-calendar-link";
+    const calendlyURL = "https://calendly.com/marviott";
     window.open(calendlyURL, '_blank');
   };
 
@@ -77,7 +77,7 @@ function Contact() {
               <div className="method-icon">📞</div>
               <h3>Call Us</h3>
               <p>Speak directly with our team</p>
-              <a href="tel:+1234567890">+1 (234) 567-8900</a>
+              <a href="tel:+1 (346) 600-3396">+1 (346) 600-3396</a>
             </div>
             
             <div className="method-card">
@@ -161,7 +161,7 @@ function Contact() {
                     name="phone" 
                     value={formData.phone}
                     onChange={handleInputChange}
-                    placeholder="+1 (555) 123-4567"
+                    placeholder="+1 (123) 456-7890"
                   />
                 </div>
               </div>
