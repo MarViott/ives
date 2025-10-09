@@ -29,7 +29,7 @@ function Home() {
             playsInline
             poster="/images/video-poster.jpg"
           >
-            <source src="/watermarked-2841dbf5-daa8-44af-8c57-914bca115eb5.mp4" type="video/mp4" />
+            <source src="/shippingstar.mp4" type="video/mp4" />
             {/* Mensaje de fallback si el video no se puede cargar */}
             <p>Your browser does not support the video tag.</p>
           </video>
