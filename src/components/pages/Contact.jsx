@@ -78,18 +78,7 @@ function Contact() {
               <h3>Call Us</h3>
               <p>Speak directly with our team</p>
               <a href="tel:+1 (346) 600-3396">+1 (346) 600-3396</a>
-            </div>
-            
-            <div className="method-card">
-              <div className="method-icon">📍</div>
-              <h3>Visit Us</h3>
-              <p>Our office in Houston, Texas</p>
-              <address>
-                123 Logistics Blvd<br />
-                Houston, TX 77001<br />
-                United States
-              </address>
-            </div>
+            </div>            
             
             <div className="method-card featured">
               <div className="method-icon">🗓️</div>

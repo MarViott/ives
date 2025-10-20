@@ -114,12 +114,13 @@
   margin-top: 2rem;
 }
 
-.method-card {
+.method-card { 
   background: rgba(255, 255, 255, 0.05);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
-  padding: 2rem;
+  padding: 1rem;
   text-align: center;
   transition: all 0.3s ease;
 }
@@ -213,15 +214,16 @@
   font-size: 1.1rem;
 }
 
-/* Formulario mejorado */
 .contact-form {
   background: rgba(255, 255, 255, 0.95);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border-radius: 16px;
   padding: 2.5rem;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
+
 
 .form-row {
   display: grid;
@@ -311,13 +313,14 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 3rem;
-}
-
 .info-card {
   background: rgba(255, 255, 255, 0.05);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
+  padding: 2.5rem;
+}
   padding: 2.5rem;
 }
 

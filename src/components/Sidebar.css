@@ -4,7 +4,7 @@
   top: 120px;
   left: 20px;
   z-index: 1001;
-  background: linear-gradient(135deg, #646cff 0%, #535bf2 100%);
+  background: rgb (65, 105, 225);
   border: none;
   border-radius: 8px;
   width: 50px;
@@ -54,6 +54,7 @@
   bottom: 0;
   background: rgba(0, 0, 0, 0.5);
   z-index: 999;
+  -webkit-backdrop-filter: blur(2px);
   backdrop-filter: blur(2px);
 }
 
@@ -83,7 +84,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(135deg, #646cff 0%, #535bf2 100%);
+  background: #4169e1;
 }
 
 .sidebar-header h3 {
@@ -150,7 +151,7 @@
 }
 
 .service-title {
-  flex: 1;
+  flex: 1;  
 }
 
 .arrow {
