@@ -36,9 +36,7 @@ function Home() {
           
           {/* Overlay con contenido */}
           <div className="video-overlay">
-            <div className="hero-content">
-              <h1 className="hero-title">SHIPPING STAR SOLUTIONS LLC</h1>
-              <p className="hero-subtitle">Global Logistics Excellence</p>
+            <div className="hero-content">              
               <div className="hero-actions">
                 <button className="cta-button primary" onClick={handleGetQuote}>
                   Get Quote
