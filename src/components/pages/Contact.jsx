@@ -45,7 +45,7 @@ function Contact() {
   };
 
   return (
-    <div className="contact-page">
+    <div className="contact-page">      
       {/* Hero Section */}
       <section className="contact-hero">
         <div className="hero-content">
