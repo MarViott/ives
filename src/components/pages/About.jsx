@@ -22,9 +22,7 @@ function About() {
 
           {/* Overlay con contenido */}
           <div className="video-overlay">
-            <div className="hero-content">
-              <h1>About Us</h1>
-              <p className="hero-subtitle">Excellence in Energy Logistics</p>
+            <div className="hero-content">              
             </div>
           </div>
         </div>

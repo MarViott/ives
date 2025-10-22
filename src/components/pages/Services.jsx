@@ -1,61 +1,144 @@
-import React from 'react';
-import './Services.css';
+import React from "react";
+import "./Services.css";
 
-const servicios = [
-    {
-        titulo: 'Desarrollo de Logística a Medida',
-        descripcion: 'Desarrollamos soluciones de logística adaptadas a tus necesidades específicas, optimizando rutas y procesos para maximizar la eficiencia.',
-        icono: '🚛'
-    },
-    {
-        titulo: 'Consultoría Logística',
-        descripcion: 'Asesoramos en la optimización de procesos logísticos para mejorar la eficiencia y reducir costos operativos.',
-        icono: '📊'
-    },
-    {
-        titulo: 'Outsourcing de Logística',
-        descripcion: 'Gestionamos tus operaciones logísticas para que puedas enfocarte en tu negocio principal mientras nosotros nos encargamos del resto.',
-        icono: '🤝'
-    },
-    {
-        titulo: 'Integración Comercial y Corporativa',
-        descripcion: 'Facilitamos la integración de sistemas comerciales y corporativos para una gestión unificada y eficiente.',
-        icono: '🔗'
-    },
-    {
-        titulo: 'Soporte Contable y Fiscal',
-        descripcion: 'Ofrecemos soporte especializado en temas contables y fiscales relacionados con la logística y el comercio internacional.',
-        icono: '📋'
-    },
-];
+function Services() {
+  return (
+    <div className="services-page">
+      {/* Header Section */}
+      <section className="services-header">
+        <div className="container">
+          <h1>Our Services</h1>
+          <p>
+            Comprehensive logistics and transportation solutions tailored to
+            your business needs
+          </p>
+        </div>
+      </section>
 
-const Services = () => (
-    <div className="services-container">
-        <div className="services-header">
-            <h1>Nuestros Servicios</h1>
-            <p className="subtitle">
-                Impulsa tu empresa con estrategias de logística efectivas. Shipping Star Solutions LLC ofrece una amplia gama de servicios de logística adaptados a tus necesidades.
+      {/* Services Grid */}
+      <section className="services-grid">
+        <div className="container">
+          <div className="services-grid">
+            {/* Service 1 */}
+            <div className="service-card">
+              <span className="service-icon">🚛</span>
+              <h3>Ground Transportation</h3>
+              <p>
+                Full truckload (FTL) and less-than-truckload (LTL) services with
+                modern fleet and real-time tracking. We ensure safe and timely
+                delivery of your cargo across North America.
+              </p>
+            </div>
+
+            {/* Service 2 */}
+            <div className="service-card">
+              <span className="service-icon">🚢</span>
+              <h3>Maritime Shipping</h3>
+              <p>
+                International container shipping and port logistics management.
+                We handle FCL and LCL shipments with comprehensive door-to-door
+                service and customs clearance support.
+              </p>
+            </div>
+
+            {/* Service 3 */}
+            <div className="service-card">
+              <span className="service-icon">✈️</span>
+              <h3>Air Freight</h3>
+              <p>
+                Fast and reliable air cargo services for time-sensitive
+                shipments. Express and standard options available with global
+                coverage and priority handling for urgent deliveries.
+              </p>
+            </div>
+
+            {/* Service 4 */}
+            <div className="service-card">
+              <span className="service-icon">⚡</span>
+              <h3>Energy & Oil Services</h3>
+              <p>
+                Specialized logistics for the oil and gas industry. Heavy haul,
+                project cargo, and equipment transportation for energy projects
+                with safety compliance and expert handling.
+              </p>
+            </div>
+
+            {/* Service 5 */}
+            <div className="service-card">
+              <span className="service-icon">🏭</span>
+              <h3>Industrial Projects</h3>
+              <p>
+                Complete logistics solutions for industrial and manufacturing
+                projects. From planning to execution, we manage oversized cargo,
+                heavy machinery, and complex multi-modal transportation.
+              </p>
+            </div>
+
+            {/* Service 6 */}
+            <div className="service-card">
+              <span className="service-icon">📦</span>
+              <h3>Warehousing & Distribution</h3>
+              <p>
+                Secure storage facilities with inventory management and
+                distribution services. Cross-docking, order fulfillment, and
+                value-added services to optimize your supply chain.
+              </p>
+            </div>
+
+            {/* Service 7 */}
+            <div className="service-card">
+              <span className="service-icon">🌍</span>
+              <h3>International Logistics</h3>
+              <p>
+                End-to-end global logistics management with customs brokerage,
+                trade compliance, and documentation. We navigate complex
+                international regulations to ensure smooth cross-border
+                operations.
+              </p>
+            </div>
+
+            {/* Service 8 */}
+            <div className="service-card">
+              <span className="service-icon">💻</span>
+              <h3>Technology & Tracking</h3>
+              <p>
+                Advanced tracking systems and digital platforms for full
+                shipment visibility. Real-time updates, automated alerts, and
+                comprehensive reporting for complete supply chain transparency.
+              </p>
+            </div>
+
+            {/* Service 9 */}
+            <div className="service-card">
+              <span className="service-icon">📊</span>
+              <h3>Logistics Consulting</h3>
+              <p>
+                Strategic consulting to optimize your supply chain operations.
+                Cost analysis, route optimization, and process improvement to
+                enhance efficiency and reduce operational expenses.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="services-cta">
+        <div className="container">
+          <div className="cta-content">
+            <h2>Ready to Optimize Your Logistics?</h2>
+            <p>
+              Contact us today for a free consultation and discover how our
+              comprehensive logistics solutions can drive your business forward.
             </p>
-        </div>
-        
-        <div className="services-grid">
-            {servicios.map((servicio, idx) => (
-                <div key={idx} className="service-card">
-                    <div className="service-icon">{servicio.icono}</div>
-                    <h3 className="service-title">{servicio.titulo}</h3>
-                    <p className="service-description">{servicio.descripcion}</p>
-                </div>
-            ))}
-        </div>
-        
-        <div className="services-cta">
-            <h2>¿Listo para potenciar tu empresa?</h2>
-            <p>Nuestro equipo de expertos está aquí para ayudarte a optimizar tus operaciones logísticas.</p>
-            <a href="mailto:contacto@shippingstarsolutions.com" className="cta-button">
-                Contáctanos para una asesoría personalizada
+            <a href="/contact" className="cta-button">
+              Get a Free Quote
             </a>
+          </div>
         </div>
+      </section>
     </div>
-);
+  );
+}
 
 export default Services;
