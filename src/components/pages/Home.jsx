@@ -17,15 +17,15 @@ function Home() {
   };
 
   return (
-    <div className='home-page'>
+    <div className="home-page">
       {/* Video Hero Section */}
       <section className="video-hero">
         <div className="video-container">
-          <video 
+          <video
             className="hero-video"
-            autoPlay 
-            muted 
-            loop 
+            autoPlay
+            muted
+            loop
             playsInline
             poster="/images/video-poster.jpg"
           >
@@ -33,19 +33,10 @@ function Home() {
             {/* Mensaje de fallback si el video no se puede cargar */}
             <p>Your browser does not support the video tag.</p>
           </video>
-          
+
           {/* Overlay con contenido */}
           <div className="video-overlay">
-            <div className="hero-content">              
-              <div className="hero-actions">
-                <button className="cta-button primary" onClick={handleGetQuote}>
-                  Get Quote
-                </button>
-                <button className="cta-button secondary" onClick={handleViewServices}>
-                  Our Services
-                </button>
-              </div>
-            </div>
+            <div className="hero-content"></div>
           </div>
         </div>
       </section>
@@ -55,30 +46,42 @@ function Home() {
         <div className="container">
           <h2>Our Services</h2>
           <p>Comprehensive logistics solutions for your business needs</p>
-          
+
           <div className="services-grid">
             <div className="service-card">
               <div className="service-icon">🚛</div>
               <h3>Ground Transportation</h3>
               <p>Modern fleet of trucks for reliable ground logistics</p>
             </div>
-            
+
             <div className="service-card">
               <div className="service-icon">🚢</div>
               <h3>Maritime Shipping</h3>
               <p>Container shipping and port logistics worldwide</p>
             </div>
-            
+
             <div className="service-card">
               <div className="service-icon">✈️</div>
               <h3>Air Freight</h3>
               <p>Fast and secure air transportation services</p>
             </div>
-            
+
             <div className="service-card">
               <div className="service-icon">🌍</div>
               <h3>Global Solutions</h3>
               <p>End-to-end logistics management worldwide</p>
+            </div>
+
+            <div className="service-card">
+              <div className="service-icon">📦</div>
+              <h3>Warehousing and Distribution</h3>
+              <p>Efficient storage and distribution solutions</p>
+            </div>
+
+            <div className="service-card">
+              <div className="service-icon">⚡</div>
+              <h3>Energy & Oil Services</h3>
+              <p>Specialized logistics for the oil and gas industry</p>
             </div>
           </div>
         </div>
@@ -88,10 +91,25 @@ function Home() {
       <section className="consulting-section">
         <div className="container">
           <h2>Logistic and Transportation</h2>
-          <p>Over 25 years of experience in international transportation services for oil and gas, energy, and industrial projects.</p>
-          
+          <p>
+            Over 25 years of experience in international transportation services
+            for oil and gas, energy, and industrial projects.
+          </p>
+          <div className="hero-actions">
+            <button className="cta-button primary" onClick={handleGetQuote}>
+              Get Quote
+            </button>
+            <button
+              className="cta-button secondary"
+              onClick={handleViewServices}
+            >
+              Our Services
+            </button>
+          </div>
+          <br />
+          <br />
           <Gallery />
-          
+          <br />
           <div className="consulting-features">
             <div className="feature">
               <h3>📊 Strategic Planning</h3>
@@ -109,7 +127,7 @@ function Home() {
         </div>
       </section>
     </div>
-  )
+  );
 }
 
 export default Home
