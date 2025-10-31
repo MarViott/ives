@@ -10,6 +10,103 @@
   padding: 0 2rem;
 }
 
+/* Hero Section - MISMO CSS QUE CONTACT */
+.services-hero {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+  padding: 4rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.services-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(100, 108, 255, 0.1) 0%, rgba(83, 91, 242, 0.05) 100%);
+  z-index: 1;
+}
+
+.services-hero .hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.services-hero h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #646cff 0%, #535bf2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.services-hero p {
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Botones principales */
+.btn {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 180px;
+  justify-content: center;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #646cff 0%, #535bf2 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(100, 108, 255, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(100, 108, 255, 0.4);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Services Content */
+.services-content {
+  background: linear-gradient(180deg, #1a1a1a 0%, #2d2d2d 100%);
+  padding: 4rem 0;
+}
+
 /* Header Section */
 .services-header {
   padding: 4rem 0;
@@ -39,10 +136,9 @@
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 2.5rem;
   padding: 4rem 0;
-  background: #1a1a1a;
 }
 
-/* Service Card - CORREGIDO */
+/* Service Card */
 .service-card {
   background: rgba(255, 255, 255, 0.08);
   -webkit-backdrop-filter: blur(10px);
@@ -85,17 +181,17 @@
   font-size: 1.05rem;
 }
 
-/* CTA Section */
+/* CTA Section - FONDO OSCURO */
 .services-cta {
   padding: 4rem 0;
-  background: linear-gradient(135deg, rgba(100, 108, 255, 0.15) 0%, rgba(83, 91, 242, 0.1) 100%);
+  background: #1a1a1a;
   text-align: center;
 }
+
 .cta-content {
   background: rgba(255, 255, 255, 0.08);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 16px;
   padding: 3rem;
@@ -140,6 +236,23 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .services-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .services-hero p {
+    font-size: 1.2rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn {
+    min-width: auto;
+  }
+
   .services-header h1 {
     font-size: 2.5rem;
   }
@@ -170,6 +283,18 @@
 @media (max-width: 480px) {
   .container {
     padding: 0 1rem;
+  }
+
+  .services-hero {
+    padding: 3rem 1rem;
+  }
+
+  .services-hero h1 {
+    font-size: 2rem;
+  }
+
+  .services-hero p {
+    font-size: 1rem;
   }
 
   .services-header {

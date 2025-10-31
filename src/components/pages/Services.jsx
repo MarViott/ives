@@ -1,22 +1,42 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./Services.css";
 
 function Services() {
+  const navigate = useNavigate();
+
+  const handleGetQuote = () => {
+    navigate("/contact");
+  };
+
+  const handleBookMeeting = () => {
+    const calendlyURL = "https://calendly.com/marviott";
+    window.open(calendlyURL, "_blank");
+  };
+
   return (
     <div className="services-page">
-      {/* Header Section */}
-      <section className="services-header">
-        <div className="container">
+      {/* Hero Section - IGUAL QUE EN CONTACT */}
+      <section className="services-hero">
+        <div className="hero-content">
           <h1>Our Services</h1>
           <p>
             Comprehensive logistics and transportation solutions tailored to
             your business needs
           </p>
+          <div className="hero-actions">
+            <button className="btn btn-primary" onClick={handleBookMeeting}>
+              📅 Book a Meeting
+            </button>
+            <button className="btn btn-secondary" onClick={handleGetQuote}>
+              💬 Get a Quote
+            </button>
+          </div>
         </div>
       </section>
 
       {/* Services Grid */}
-      <section className="services-grid">
+      <section className="services-content">
         <div className="container">
           <div className="services-grid">
             {/* Service 1 */}

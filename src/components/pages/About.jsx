@@ -167,6 +167,20 @@ function About() {
                 costs
               </p>
             </div>
+            <div className="reason-item">
+              <span className="reason-number">05</span>
+              <h4>Customer Satisfaction</h4>
+              <p>
+                Dedicated customer service team to ensure your needs are met
+              </p>
+            </div>
+            <div className="reason-item">
+              <span className="reason-number">06</span>
+              <h4>Environmental Responsibility</h4>
+              <p>
+                Commitment to sustainable practices in all our operations
+              </p>
+            </div>
           </div>
         </div>
       </section>
