@@ -15,15 +15,14 @@ function About() {
             playsInline
             poster="/images/wind-turbines-poster.jpg"
           >
-            <source src="/parqueeolicoylogo.mp4" type="video/mp4" />
-            <source src="/parqueeolicoylogo.webm" type="video/webm" />
+            <source src="/parqueeolico2.mp4" type="video/mp4" />
+            <source src="/parqueeolico2.webm" type="video/webm" />
             Your browser does not support the video tag.
           </video>
 
           {/* Overlay con contenido */}
           <div className="video-overlay">
-            <div className="hero-content">              
-            </div>
+            <div className="hero-content"></div>
           </div>
         </div>
       </section>
@@ -177,9 +176,7 @@ function About() {
             <div className="reason-item">
               <span className="reason-number">06</span>
               <h4>Environmental Responsibility</h4>
-              <p>
-                Commitment to sustainable practices in all our operations
-              </p>
+              <p>Commitment to sustainable practices in all our operations</p>
             </div>
           </div>
         </div>
