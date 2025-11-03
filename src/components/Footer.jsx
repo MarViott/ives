@@ -12,7 +12,7 @@ function Footer() {
       >
         <p>
           &copy; 2025 - Shipping Star Solutions LLC. All rights reserved -
-          Desarollado por
+          Developed by{" "}
           <a
             href="https://www.linkedin.com/in/marisa-viotti-74601036a/"
             target="_blank"
