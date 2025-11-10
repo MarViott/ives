@@ -1,15 +1,11 @@
 import React from "react";
-import camiones1 from "../public/img/camiones1.jpg";
-import parqueEolico0 from "../public/img/parque_eolico_0.jpg";
-import camiones2 from "../public/img/camiones2.jpg";
-import parqueEolico3 from "../public/img/parque_eolico_3.jpg";
 
 function Gallery() {
   const images = [
-    { src: camiones1, alt: "Ground Transportation Fleet" },
-    { src: parqueEolico0, alt: "Wind Energy Projects" },
-    { src: camiones2, alt: "Heavy Cargo Transport" },
-    { src: parqueEolico3, alt: "Renewable Energy Logistics" },
+    { src: "/img/camiones1.jpg", alt: "Ground Transportation Fleet" },
+    { src: "/img/parque_eolico_0.jpg", alt: "Wind Energy Projects" },
+    { src: "/img/camiones2.jpg", alt: "Heavy Cargo Transport" },
+    { src: "/img/parque_eolico_3.jpg", alt: "Renewable Energy Logistics" },
   ];
 
   return (
