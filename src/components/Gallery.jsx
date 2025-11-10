@@ -1,8 +1,8 @@
 import React from "react";
-import camiones1 from "../assets/img/camiones1.jpg";
-import parqueEolico0 from "../assets/img/parque_eolico_0.jpg";
-import camiones2 from "../assets/img/camiones2.jpg";
-import parqueEolico3 from "../assets/img/parque_eolico_3.jpg";
+import camiones1 from "../public/img/camiones1.jpg";
+import parqueEolico0 from "../public/img/parque_eolico_0.jpg";
+import camiones2 from "../public/img/camiones2.jpg";
+import parqueEolico3 from "../public/img/parque_eolico_3.jpg";
 
 function Gallery() {
   const images = [
