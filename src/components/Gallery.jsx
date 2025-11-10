@@ -1,35 +1,42 @@
-import React from 'react';
+import React from "react";
+import camiones1 from "../assets/img/camiones1.jpg";
+import parqueEolico0 from "../assets/img/parque_eolico_0.jpg";
+import camiones2 from "../assets/img/camiones2.jpg";
+import parqueEolico3 from "../assets/img/parque_eolico_3.jpg";
 
-function Gallery() {  
-    const images = [  
-        "./src/assets/img/camiones1.jpg",  
-        "./src/assets/img/parque_eolico_0.jpg",  
-        "./src/assets/img/camiones2.jpg",  
-        "./src/assets/img/parque_eolico_3.jpg",
-    ];  
-        
+function Gallery() {
+  const images = [
+    { src: camiones1, alt: "Ground Transportation Fleet" },
+    { src: parqueEolico0, alt: "Wind Energy Projects" },
+    { src: camiones2, alt: "Heavy Cargo Transport" },
+    { src: parqueEolico3, alt: "Renewable Energy Logistics" },
+  ];
 
-    return (  
-        <>
-        <section style={{ 
-            display: "flex",
-            flexWrap: "wrap", 
-            gap: "10px", 
-            justifyContent: "center", 
-            marginTop: "20px" }}> 
-
-            {images.map((src, index) => (  
-                <img 
-                key={index} 
-                src={src} 
-                alt={`Imagen ${index + 1}`} 
-                style={{ 
-                    width: "250px", 
-                    height: "250px" }} />  
-            ))}  
-        </section>  
-        </>
-    );  
-}  
+  return (
+    <section
+      style={{
+        display: "flex",
+        flexWrap: "wrap",
+        gap: "10px",
+        justifyContent: "center",
+        marginTop: "20px",
+      }}
+    >
+      {images.map((image, index) => (
+        <img
+          key={index}
+          src={image.src}
+          alt={image.alt}
+          style={{
+            width: "250px",
+            height: "250px",
+            objectFit: "cover",
+            borderRadius: "8px",
+          }}
+        />
+      ))}
+    </section>
+  );
+}
 
 export default Gallery;
