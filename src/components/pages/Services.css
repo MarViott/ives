@@ -157,15 +157,16 @@
   background: rgba(255, 255, 255, 0.12);
 }
 
-.service-icon {
-  font-size: 4.5rem;
+/* Selector más específico para que no lo pise Sidebar.css */
+.services-page .service-card .service-icon {
+  font-size: 4.5rem !important;
   margin-bottom: 1.5rem;
   display: block;
   transition: transform 0.3s ease;
 }
 
 .service-card:hover .service-icon {
-  transform: scale(1.1);
+  transform: scale(1.15);
 }
 
 .service-card h3 {
@@ -267,8 +268,8 @@
     padding: 2rem;
   }
 
-  .service-icon {
-    font-size: 4rem;
+  .services-page .service-card .service-icon {
+    font-size: 4rem !important;
   }
 
   .cta-content {
@@ -309,8 +310,8 @@
     font-size: 1rem;
   }
 
-  .service-icon {
-    font-size: 3.5rem;
+  .services-page .service-card .service-icon {
+    font-size: 3rem !important;
   }
 
   .service-card h3 {
