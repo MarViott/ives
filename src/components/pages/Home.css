@@ -190,8 +190,13 @@
   -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  font-size: 3rem;
-  margin-bottom: 1rem;
+  font-size: 4.5rem;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.service-card:hover .service-icon {
+  transform: scale(1.15);
 }
 
 .service-card h3 {
@@ -309,6 +314,10 @@
   .consulting-features {
     grid-template-columns: 1fr;
   }
+  
+  .service-icon {
+    font-size: 4rem;
+  }
 }
 
 /* Responsive Design - Mobile */
@@ -391,5 +400,9 @@
       rgba(0, 0, 0, 0.2) 50%,
       rgba(0, 0, 0, 0.5) 100%
     );
+  }
+  
+  .service-icon {
+    font-size: 3.5rem;
   }
 }
