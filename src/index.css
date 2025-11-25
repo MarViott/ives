@@ -114,6 +114,24 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+/* Mobile styles */
+@media (max-width: 768px) {
+  nav ul {
+    background: linear-gradient(135deg, #646cff 0%, #535bf2 100%);
+    padding: 12px 15px;
+    box-shadow: 0 4px 12px rgba(100, 108, 255, 0.3);
+  }
+  
+  nav ul li a {
+    color: #ffffff;
+    font-weight: 600;
+  }
+  
+  nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

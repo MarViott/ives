@@ -2,8 +2,8 @@ import React from 'react';
 
 function Header() {  
     return (  
-        <header style={{ background: "#4169e1", padding: "30px", margin: "0px", textAlign: "center", color: "white", justifyContent: "center", alignItems: "center" }}>  
-            <h1>SHIPPING STAR SOLUTIONS LLC</h1>
+        <header style={{ background: "#7091f4ff", padding: "30px", margin: "0px", textAlign: "center", color: "white", justifyContent: "center", alignItems: "center" }}>  
+            <logo style={{color: "white", fontSize: "3rem", fontWeight: "bold"}}>SHIPPING STAR SOLUTIONS LLC</logo>
             <h2>Your trusted partner in business solutions.</h2>  
         </header>  
     );  

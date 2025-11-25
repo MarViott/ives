@@ -176,7 +176,6 @@
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
   padding: 3rem;
   text-align: center;
@@ -231,8 +230,6 @@
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
   padding: 2rem;
   text-align: center;
@@ -261,7 +258,7 @@
   line-height: 1.6;
 }
 
-/* Why Choose Us - FONDO CELESTE COMO HEADER */
+/* Why Choose Us */
 .why-choose {
   padding: 4rem 0;
   background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
@@ -276,8 +273,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, #646cff 0%, #535bf2 100%);
-  opacity: 0.1;
+  background: linear-gradient(135deg, rgba(100, 108, 255, 0.1) 0%, rgba(83, 91, 242, 0.05) 100%);
   z-index: 1;
 }
 
@@ -341,7 +337,7 @@
   line-height: 1.6;
 }
 
-/* Responsive Design */
+/* Responsive Design - Tablet */
 @media (max-width: 768px) {
   .about-hero {
     height: 50vh;
@@ -371,8 +367,26 @@
   .reasons-grid {
     grid-template-columns: 1fr;
   }
+  
+  /* Colores más claros en tablet */
+  .company-info {
+    background: linear-gradient(180deg, #2d2d2d 0%, #3a3a3a 100%);
+  }
+  
+  .mission-vision {
+    background: #2d2d2d;
+  }
+  
+  .values-section {
+    background: linear-gradient(180deg, #3a3a3a 0%, #2d2d2d 100%);
+  }
+  
+  .why-choose {
+    background: linear-gradient(135deg, #2d2d2d 0%, #3a3a3a 100%);
+  }
 }
 
+/* Responsive Design - Mobile */
 @media (max-width: 480px) {
   .container {
     padding: 0 1rem;
@@ -398,5 +412,70 @@
   .values-section h2,
   .why-choose h2 {
     font-size: 2rem;
+  }
+  
+  /* Colores mucho más claros en mobile */
+  .about-page {
+    color: rgba(255, 255, 255, 0.95);
+  }
+  
+  .company-info {
+    background: linear-gradient(180deg, #4a4a4a 0%, #5a5a5a 100%);
+    padding: 3rem 0;
+  }
+  
+  .mission-vision {
+    background: #4a4a4a;
+    padding: 3rem 0;
+  }
+  
+  .values-section {
+    background: linear-gradient(180deg, #5a5a5a 0%, #4a4a4a 100%);
+    padding: 3rem 0;
+  }
+  
+  .why-choose {
+    background: linear-gradient(135deg, #4a4a4a 0%, #5a5a5a 100%);
+    padding: 3rem 0;
+  }
+  
+  .video-overlay {
+    background: linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 0.4) 0%,
+      rgba(0, 0, 0, 0.2) 50%,
+      rgba(0, 0, 0, 0.4) 100%
+    );
+  }
+  
+  .stat-card,
+  .mv-card,
+  .value-card,
+  .reason-item {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .stat-card:hover,
+  .mv-card:hover,
+  .value-card:hover,
+  .reason-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 6px 20px rgba(100, 108, 255, 0.3);
+  }
+  
+  .intro-text,
+  .mv-card p,
+  .value-card p,
+  .reason-item p,
+  .stat-label {
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .mv-card h3,
+  .value-card h4,
+  .reason-item h4 {
+    color: rgba(255, 255, 255, 0.98);
   }
 }
