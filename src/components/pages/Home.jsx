@@ -2,16 +2,15 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import Gallery from "../Gallery";
+import ScrollToTop from "../ScrollToTop";
 import "./Home.css";
 
 function Home() {
   const navigate = useNavigate();
 
-  // Usar arrow functions y métodos modernos
   const handleGetQuote = () => navigate("/contact");
   const handleViewServices = () => navigate("/services");
 
-  // Datos de servicios como constante (podría moverse fuera del componente)
   const services = [
     {
       icon: "🚛",
@@ -168,6 +167,9 @@ function Home() {
             </div>
           </div>
         </section>
+
+        {/* Scroll to Top Button */}
+        <ScrollToTop />
       </div>
     </>
   );

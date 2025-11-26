@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import ScrollToTop from "../ScrollToTop";
 import "./Services.css";
 
 function Services() {
@@ -194,6 +195,9 @@ function Services() {
             </div>
           </div>
         </section>
+
+        {/* Scroll to Top Button */}
+        <ScrollToTop />
       </div>
     </>
   );

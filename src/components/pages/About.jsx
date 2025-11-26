@@ -1,5 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
+import ScrollToTop from "../ScrollToTop";
 import "./About.css";
 
 function About() {
@@ -208,6 +209,9 @@ function About() {
             </div>
           </div>
         </section>
+
+        {/* Scroll to Top Button */}
+        <ScrollToTop />
       </div>
     </>
   );
