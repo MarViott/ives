@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./Contact.css";
 
 function Contact() {
@@ -19,7 +21,7 @@ function Contact() {
 
   // Función para abrir WhatsApp con mensaje predefinido
   const openWhatsApp = () => {
-    const phoneNumber = "13466003396"; // Reemplaza con tu número real
+    const phoneNumber = "13466003396";
     const message =
       "Hello! I'm interested in learning more about your logistics and transportation services.";
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
@@ -30,7 +32,6 @@ function Contact() {
 
   // Función para abrir Calendly o sistema de citas
   const openBookMeeting = () => {
-    // Reemplaza esta URL con tu enlace de Calendly o sistema de citas
     const calendlyURL = "https://calendly.com/marviott";
     window.open(calendlyURL, "_blank");
   };
@@ -47,6 +48,12 @@ function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
     setStatus("");
+
+    // Toast de inicio
+    const loadingToast = toast.loading("Sending your message...", {
+      position: "top-right",
+      theme: "dark",
+    });
 
     try {
       const response = await fetch("https://formspree.io/f/xyzaokjl", {
@@ -81,20 +88,41 @@ function Contact() {
           service: "",
           message: "",
         });
-        // Mostrar mensaje de éxito
-        alert("Thank you for your message! We will contact you soon.");
+
+        // Actualizar toast a éxito
+        toast.update(loadingToast, {
+          render: "✅ Thank you for your message! We will contact you soon.",
+          type: "success",
+          isLoading: false,
+          autoClose: 5000,
+          theme: "dark",
+        });
       } else {
         setStatus("error");
-        alert(
-          "There was an error submitting the form. Please try again or contact us directly."
-        );
+
+        // Actualizar toast a error
+        toast.update(loadingToast, {
+          render:
+            "❌ There was an error submitting the form. Please try again or contact us directly.",
+          type: "error",
+          isLoading: false,
+          autoClose: 5000,
+          theme: "dark",
+        });
       }
     } catch (error) {
       console.error("Error submitting form:", error);
       setStatus("error");
-      alert(
-        "There was an error submitting the form. Please try again or contact us directly."
-      );
+
+      // Actualizar toast a error
+      toast.update(loadingToast, {
+        render:
+          "❌ There was an error submitting the form. Please try again or contact us directly.",
+        type: "error",
+        isLoading: false,
+        autoClose: 5000,
+        theme: "dark",
+      });
     } finally {
       setIsSubmitting(false);
     }
@@ -102,6 +130,20 @@ function Contact() {
 
   return (
     <div className="contact-page">
+      {/* Toast Container */}
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={true}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
+
       {/* Hero Section */}
       <section className="contact-hero">
         <div className="hero-content">
@@ -319,18 +361,6 @@ function Contact() {
                   terms of service.
                 </p>
               </div>
-
-              {status === "success" && (
-                <div className="form-status success">
-                  ✅ Message sent successfully! We'll get back to you soon.
-                </div>
-              )}
-
-              {status === "error" && (
-                <div className="form-status error">
-                  ❌ There was an error sending your message. Please try again.
-                </div>
-              )}
             </form>
           </div>
         </div>
