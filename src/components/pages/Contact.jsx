@@ -1,8 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, lazy, Suspense } from "react";
 import { Helmet } from "react-helmet-async";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import "./Contact.css";
+
+// Lazy load toast notifications
+const ToastContainer = lazy(() =>
+  import("react-toastify").then((module) => ({
+    default: module.ToastContainer,
+  }))
+);
+
+// Importar toast dinámicamente solo cuando se necesite
+const loadToast = () => import("react-toastify").then((module) => module.toast);
+
+// Lazy load CSS solo cuando se necesite
+if (typeof window !== "undefined") {
+  import("react-toastify/dist/ReactToastify.css");
+}
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -19,6 +32,7 @@ function Contact() {
 
   const [status, setStatus] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showToast, setShowToast] = useState(false);
 
   const openWhatsApp = () => {
     const phoneNumber = "13466003396";
@@ -47,13 +61,16 @@ function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
     setStatus("");
-
-    const loadingToast = toast.loading("Sending your message...", {
-      position: "top-right",
-      theme: "dark",
-    });
+    setShowToast(true); // Activar lazy load del toast
 
     try {
+      const toast = await loadToast();
+
+      const loadingToast = toast.loading("Sending your message...", {
+        position: "top-right",
+        theme: "dark",
+      });
+
       const response = await fetch("https://formspree.io/f/xyzaokjl", {
         method: "POST",
         headers: {
@@ -110,14 +127,15 @@ function Contact() {
       console.error("Error submitting form:", error);
       setStatus("error");
 
-      toast.update(loadingToast, {
-        render:
-          "❌ There was an error submitting the form. Please try again or contact us directly.",
-        type: "error",
-        isLoading: false,
-        autoClose: 5000,
-        theme: "dark",
-      });
+      const toast = await loadToast();
+      toast.error(
+        "❌ There was an error submitting the form. Please try again or contact us directly.",
+        {
+          position: "top-right",
+          autoClose: 5000,
+          theme: "dark",
+        }
+      );
     } finally {
       setIsSubmitting(false);
     }
@@ -152,19 +170,23 @@ function Contact() {
       </Helmet>
 
       <div className="contact-page">
-        {/* Toast Container */}
-        <ToastContainer
-          position="top-right"
-          autoClose={5000}
-          hideProgressBar={false}
-          newestOnTop={true}
-          closeOnClick
-          rtl={false}
-          pauseOnFocusLoss
-          draggable
-          pauseOnHover
-          theme="dark"
-        />
+        {/* Toast Container con Lazy Loading */}
+        {showToast && (
+          <Suspense fallback={null}>
+            <ToastContainer
+              position="top-right"
+              autoClose={5000}
+              hideProgressBar={false}
+              newestOnTop={true}
+              closeOnClick
+              rtl={false}
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
+              theme="dark"
+            />
+          </Suspense>
+        )}
 
         {/* Hero Section */}
         <section className="contact-hero">

@@ -54,6 +54,7 @@ function Home() {
               muted
               loop
               playsInline
+              preload="metadata" // Solo cargar metadata primero
               poster="/images/video-poster.jpg"
             >
               <source src="/shippingstar.mp4" type="video/mp4" />
