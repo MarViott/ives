@@ -7,15 +7,61 @@ import "./Home.css";
 function Home() {
   const navigate = useNavigate();
 
-  const handleGetQuote = () => {
-    // Navegar a la página de contacto
-    navigate("/contact");
-  };
+  // Usar arrow functions y métodos modernos
+  const handleGetQuote = () => navigate("/contact");
+  const handleViewServices = () => navigate("/services");
 
-  const handleViewServices = () => {
-    // Navegar a la página de servicios
-    navigate("/services");
-  };
+  // Datos de servicios como constante (podría moverse fuera del componente)
+  const services = [
+    {
+      icon: "🚛",
+      title: "Ground Transportation",
+      description: "Modern fleet of trucks for reliable ground logistics",
+    },
+    {
+      icon: "🚢",
+      title: "Maritime Shipping",
+      description: "Container shipping and port logistics worldwide",
+    },
+    {
+      icon: "✈️",
+      title: "Air Freight",
+      description: "Fast and secure air transportation services",
+    },
+    {
+      icon: "🌍",
+      title: "Global Solutions",
+      description: "End-to-end logistics management worldwide",
+    },
+    {
+      icon: "📦",
+      title: "Warehousing and Distribution",
+      description: "Efficient storage and distribution solutions",
+    },
+    {
+      icon: "⚡",
+      title: "Energy & Oil Services",
+      description: "Specialized logistics for the oil and gas industry",
+    },
+  ];
+
+  const features = [
+    {
+      icon: "📊",
+      title: "Strategic Planning",
+      description: "Comprehensive logistics strategy development",
+    },
+    {
+      icon: "🎯",
+      title: "Cost Optimization",
+      description: "Reduce operational costs and improve efficiency",
+    },
+    {
+      icon: "🌐",
+      title: "Global Network",
+      description: "Worldwide partnerships and coverage",
+    },
+  ];
 
   return (
     <>
@@ -54,7 +100,7 @@ function Home() {
               muted
               loop
               playsInline
-              preload="metadata" // Solo cargar metadata primero
+              preload="metadata"
               poster="/images/video-poster.jpg"
             >
               <source src="/shippingstar.mp4" type="video/mp4" />
@@ -76,41 +122,13 @@ function Home() {
             <p>Comprehensive logistics solutions for your business needs</p>
 
             <div className="services-grid">
-              <div className="service-card">
-                <div className="service-icon">🚛</div>
-                <h3>Ground Transportation</h3>
-                <p>Modern fleet of trucks for reliable ground logistics</p>
-              </div>
-
-              <div className="service-card">
-                <div className="service-icon">🚢</div>
-                <h3>Maritime Shipping</h3>
-                <p>Container shipping and port logistics worldwide</p>
-              </div>
-
-              <div className="service-card">
-                <div className="service-icon">✈️</div>
-                <h3>Air Freight</h3>
-                <p>Fast and secure air transportation services</p>
-              </div>
-
-              <div className="service-card">
-                <div className="service-icon">🌍</div>
-                <h3>Global Solutions</h3>
-                <p>End-to-end logistics management worldwide</p>
-              </div>
-
-              <div className="service-card">
-                <div className="service-icon">📦</div>
-                <h3>Warehousing and Distribution</h3>
-                <p>Efficient storage and distribution solutions</p>
-              </div>
-
-              <div className="service-card">
-                <div className="service-icon">⚡</div>
-                <h3>Energy & Oil Services</h3>
-                <p>Specialized logistics for the oil and gas industry</p>
-              </div>
+              {services.map((service, index) => (
+                <div className="service-card" key={index}>
+                  <div className="service-icon">{service.icon}</div>
+                  <h3>{service.title}</h3>
+                  <p>{service.description}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -139,18 +157,14 @@ function Home() {
             <Gallery />
             <br />
             <div className="consulting-features">
-              <div className="feature">
-                <h3>📊 Strategic Planning</h3>
-                <p>Comprehensive logistics strategy development</p>
-              </div>
-              <div className="feature">
-                <h3>🎯 Cost Optimization</h3>
-                <p>Reduce operational costs and improve efficiency</p>
-              </div>
-              <div className="feature">
-                <h3>🌐 Global Network</h3>
-                <p>Worldwide partnerships and coverage</p>
-              </div>
+              {features.map((feature, index) => (
+                <div className="feature" key={index}>
+                  <h3>
+                    {feature.icon} {feature.title}
+                  </h3>
+                  <p>{feature.description}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
