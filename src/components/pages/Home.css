@@ -184,18 +184,18 @@
   border-color: rgba(100, 108, 255, 0.5);
 }
 
-.service-icon {
+.home-service-icon {
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  font-size: 4.5rem;
+  font-size: 4.7rem;  /* Reducido de 5.5rem a 4.7rem (15% menos) */
   margin-bottom: 1.5rem;
   display: block;
 }
 
-.service-card:hover .service-icon {
+.service-card:hover .home-service-icon {
   transform: scale(1.15);
 }
 
@@ -315,8 +315,8 @@
     grid-template-columns: 1fr;
   }
   
-  .service-icon {
-    font-size: 4rem;
+  .home-service-icon {
+    font-size: 2.55rem;  /* Reducido de 3rem a 2.55rem (15% menos) */
   }
 }
 
@@ -402,7 +402,7 @@
     );
   }
   
-  .service-icon {
-    font-size: 3.5rem;
+  .home-service-icon {
+    font-size: 3rem;  /* Reducido de 3.5rem a 3rem (15% menos) */
   }
 }

@@ -123,7 +123,7 @@ function Home() {
             <div className="services-grid">
               {services.map((service, index) => (
                 <div className="service-card" key={index}>
-                  <div className="service-icon">{service.icon}</div>
+                  <div className="home-service-icon">{service.icon}</div>
                   <h3>{service.title}</h3>
                   <p>{service.description}</p>
                 </div>
