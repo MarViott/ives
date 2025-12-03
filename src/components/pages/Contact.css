@@ -1,6 +1,7 @@
 /* Reset y estilos base */
 .contact-page {
-  color: white;
+  background: var(--bg-primary);
+  color: var(--text-primary);
   min-height: 100vh;
 }
 
@@ -115,7 +116,8 @@
 }
 
 .method-card { 
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--card-bg);
+  color: var(--text-primary);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -193,6 +195,8 @@
 .form-container {
   max-width: 800px;
   margin: 0 auto;
+  background: var(--card-bg);
+  color: var(--text-primary);
 }
 
 .form-header {
@@ -316,7 +320,8 @@
 }
 
 .info-card {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--card-bg);
+  color: var(--text-primary);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -534,4 +539,130 @@
   .Toastify__toast-body {
     font-size: 0.9rem;
   }
+}
+
+.services-hero p,
+.services-header p,
+.cta-content p,
+.service-card p {
+  color: var(--text-secondary);
+  /* ...otros estilos... */
+}
+
+/* About Page Styles */
+.about-page {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+}
+
+/* Company Info Section */
+.company-info {
+  padding: 4rem 0;
+  background: var(--section-bg-light);
+}
+
+.intro-text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 3rem;
+}
+
+.stat-card {
+  background: var(--card-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px var(--shadow);
+}
+
+.stat-label {
+  font-size: 1rem;
+  color: var(--text-secondary);
+}
+
+/* Mission & Vision */
+.mission-vision {
+  padding: 4rem 0;
+  background: var(--section-bg-alt);
+}
+
+.mv-card {
+  background: var(--card-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 3rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px var(--shadow);
+}
+
+.mv-card p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+/* Values Section */
+.values-section {
+  padding: 4rem 0;
+  background: var(--section-bg-light);
+}
+
+.value-card {
+  background: var(--card-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px var(--shadow);
+}
+
+.value-card h4 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.value-card p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Why Choose Us */
+.why-choose {
+  padding: 4rem 0;
+  background: var(--section-bg-alt);
+  position: relative;
+  overflow: hidden;
+}
+
+.reason-item {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px var(--shadow);
+}
+
+.reason-item h4 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.reason-item p {
+  color: var(--text-secondary);
+  line-height: 1.6;
 }

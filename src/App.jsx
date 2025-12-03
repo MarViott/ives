@@ -10,28 +10,31 @@ import About from "./components/pages/About";
 import Services from "./components/pages/Services";
 import Contact from "./components/pages/Contact";
 import Sidebar from "./components/Sidebar";
+import { ThemeProvider } from "./context/ThemeContext";
 
 function App() {
   return (
-    <HelmetProvider>
-      <Router>
-        <div className="App">
-          <Header />
-          <Nav />
-          <Sidebar />
-          <div className="main-content">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/home" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/services" element={<Services />} />
-              <Route path="/contact" element={<Contact />} />
-            </Routes>
+    <ThemeProvider>
+      <HelmetProvider>
+        <Router>
+          <div className="App">
+            <Header />
+            <Nav />
+            <Sidebar />
+            <div className="main-content">
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/home" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/services" element={<Services />} />
+                <Route path="/contact" element={<Contact />} />
+              </Routes>
+            </div>
+            <Footer />
           </div>
-          <Footer />
-        </div>
-      </Router>
-    </HelmetProvider>
+        </Router>
+      </HelmetProvider>
+    </ThemeProvider>
   );
 }
 

@@ -1,6 +1,7 @@
 /* Home Page Styles */
 .home-page {
-  color: white;
+  background: var(--bg-primary);
+  color: var(--text-primary);
 }
 
 .container {
@@ -140,7 +141,7 @@
 /* Services Overview Section */
 .services-overview {
   padding: 4rem 0;
-  background: linear-gradient(180deg, #1a1a1a 0%, #2d2d2d 100%);
+  background: var(--section-bg-light);
 }
 
 .services-overview h2 {
@@ -155,7 +156,7 @@
 
 .services-overview p {
   text-align: center;
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--text-secondary);
   font-size: 1.2rem;
   margin-bottom: 3rem;
 }
@@ -168,29 +169,25 @@
 }
 
 .service-card {
-  background: rgba(255, 255, 255, 0.05);
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
   border-radius: 12px;
   padding: 2rem;
   text-align: center;
   transition: all 0.3s ease;
+  box-shadow: 0 2px 8px var(--shadow);
 }
 
 .service-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   border-color: rgba(100, 108, 255, 0.5);
+  box-shadow: 0 8px 24px rgba(100, 108, 255, 0.2);
+  background: var(--card-hover);
 }
 
 .home-service-icon {
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  font-size: 4.7rem;  /* Reducido de 5.5rem a 4.7rem (15% menos) */
+  font-size: 4.7rem;
   margin-bottom: 1.5rem;
   display: block;
 }
@@ -202,18 +199,18 @@
 .service-card h3 {
   font-size: 1.3rem;
   margin-bottom: 0.5rem;
-  color: white;
+  color: var(--text-primary);
 }
 
 .service-card p {
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--text-secondary);
   line-height: 1.6;
 }
 
 /* Consulting Section */
 .consulting-section {
   padding: 4rem 0;
-  background: #1a1a1a;
+  background: var(--section-bg-alt);
 }
 
 .consulting-section h2 {
@@ -228,7 +225,7 @@
 
 .consulting-section > .container > p {
   text-align: center;
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--text-secondary);
   font-size: 1.1rem;
   margin-bottom: 3rem;
   line-height: 1.6;
@@ -241,29 +238,29 @@
 }
 
 .feature {
-  background: rgba(255, 255, 255, 0.05);
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
   border-radius: 12px;
   padding: 2rem;
   text-align: center;
   transition: all 0.3s ease;
+  box-shadow: 0 2px 8px var(--shadow);
 }
 
 .feature:hover {
   transform: translateY(-5px);
   border-color: rgba(100, 108, 255, 0.5);
+  box-shadow: 0 8px 24px rgba(100, 108, 255, 0.2);
 }
 
 .feature h3 {
   font-size: 1.3rem;
   margin-bottom: 1rem;
-  color: white;
+  color: var(--text-primary);
 }
 
 .feature p {
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--text-secondary);
   line-height: 1.6;
 }
 
@@ -292,21 +289,6 @@
     max-width: 250px;
   }
   
-  /* Colores más claros en tablet */
-  .services-overview {
-    background: linear-gradient(180deg, #2d2d2d 0%, #3a3a3a 100%);
-  }
-  
-  .consulting-section {
-    background: #2d2d2d;
-  }
-  
-  .service-card,
-  .feature {
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-  }
-  
   .services-grid {
     grid-template-columns: 1fr;
   }
@@ -316,7 +298,7 @@
   }
   
   .home-service-icon {
-    font-size: 2.55rem;  /* Reducido de 3rem a 2.55rem (15% menos) */
+    font-size: 2.55rem;
   }
 }
 
@@ -339,70 +321,21 @@
     padding: 0 1rem;
   }
   
-  /* Colores mucho más claros en móvil */
-  .home-page {
-    color: rgba(255, 255, 255, 0.95);
-  }
-  
   .services-overview {
-    background: linear-gradient(180deg, #3a3a3a 0%, #4a4a4a 100%);
     padding: 3rem 0;
   }
   
   .consulting-section {
-    background: linear-gradient(180deg, #4a4a4a 0%, #3a3a3a 100%);
     padding: 3rem 0;
   }
   
-  .service-card {
-    background: rgba(255, 255, 255, 0.12);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 1.5rem;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  }
-  
-  .service-card:hover {
-    background: rgba(255, 255, 255, 0.15);
-    box-shadow: 0 6px 20px rgba(100, 108, 255, 0.25);
-  }
-  
-  .feature {
-    background: rgba(255, 255, 255, 0.12);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 1.5rem;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  }
-  
-  .feature:hover {
-    background: rgba(255, 255, 255, 0.15);
-    box-shadow: 0 6px 20px rgba(100, 108, 255, 0.25);
-  }
-  
-  .service-card h3,
-  .feature h3 {
-    color: rgba(255, 255, 255, 0.95);
-  }
-  
-  .service-card p,
-  .feature p {
-    color: rgba(255, 255, 255, 0.8);
-  }
-  
-  .services-overview p,
-  .consulting-section > .container > p {
-    color: rgba(255, 255, 255, 0.85);
-  }
-  
-  .video-overlay {
-    background: linear-gradient(
-      135deg,
-      rgba(0, 0, 0, 0.5) 0%,
-      rgba(0, 0, 0, 0.2) 50%,
-      rgba(0, 0, 0, 0.5) 100%
-    );
-  }
-  
   .home-service-icon {
-    font-size: 3rem;  /* Reducido de 3.5rem a 3rem (15% menos) */
+    font-size: 3rem;
   }
+}
+
+/* Ejemplo para Sidebar.css */
+.sidebar {
+  background: var(--sidebar-bg); /* Ya está correcto en tu index.css */
+  color: var(--text-primary);
 }

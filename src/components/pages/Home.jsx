@@ -8,8 +8,15 @@ import "./Home.css";
 function Home() {
   const navigate = useNavigate();
 
-  const handleGetQuote = () => navigate("/contact");
-  const handleViewServices = () => navigate("/services");
+  const handleGetQuote = () => {
+    navigate("/contact");
+    setTimeout(() => window.scrollTo({ top: 0, behavior: "smooth" }), 0);
+  };
+
+  const handleViewServices = () => {
+    navigate("/services");
+    setTimeout(() => window.scrollTo({ top: 0, behavior: "smooth" }), 0);
+  };
 
   const services = [
     {
